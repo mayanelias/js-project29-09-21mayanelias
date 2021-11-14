@@ -1,0 +1,72 @@
+GET http://localhost:8080/products
+###
+GET http://localhost:8080/clothing
+###
+GET http://localhost:8080/home&living
+###
+GET http://localhost:8080/jewelry&accessories
+###
+GET http://localhost:8080/paintings
+###
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+    "id":567,
+    "name":"plate",
+    "category":"clothing",
+    "description": "hfjdhjhjfhfj "
+}
+###
+PATCH http://localhost:8080/products/618d3196937aa46a33ee8a74
+Content-Type: application/json
+
+{
+    "id":200,
+    "name":"moshe",
+    "category":"clothing",
+    "description": "HEAD"
+}
+###
+DELETE http://localhost:8080/products/618abbcff08acafb7398849a
+###
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "mayan",
+    "lastName": "elias",
+    "phoneNumber":"0547302513",
+    "email":"eliasmayan@gmail.com",
+    "message":"info about a product"
+}
+###
+GET http://localhost:8080/contacts
+###
+POST http://localhost:8080/carts
+Content-Type: application/json
+
+{
+
+"products":[],
+"sum":0
+
+}
+###
+GET http://localhost:8080/carts
+###
+GET http://localhost:8080/carts/61893c91e5cf7ed1f282a46c
+###
+PATCH http://localhost:8080/carts/add
+Content-Type: application/json
+
+{
+    "id":"6187ffcc620d00c6344fe51b"
+}
+###
+PATCH http://localhost:8080/carts/delete
+Content-Type: application/json
+
+{
+    "id":"618ab57e3c8fe546bc05d93c"
+}

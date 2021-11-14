@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:snow;
+background-color:snow;
 }
 #separator{
     width: 100%;
@@ -14,8 +14,7 @@ body{
     position: relative;
     width: 100%;
     height: 30vh;
-    background-color:green;
-    opacity: 0.7;
+    background-color:tomato;
 }
 #myLogo{
     position: absolute;
@@ -45,7 +44,7 @@ li{
 text-decoration: none;
 }
 li:hover{
-    color: green;
+color:tomato;
 }
 #bg2{
     width: 100%;
@@ -53,8 +52,7 @@ li:hover{
 }
 #headLineBg{
     position: relative;
-    background-color:green;
-    opacity: 0.7;
+    background-color: tomato;
     width: 100%;
     height: 20vh;
 }
@@ -62,56 +60,160 @@ li:hover{
     position: absolute;
     color: snow;
     font-family: 'Permanent Marker', cursive;   
-    margin-left: 460px;
+    margin-left: 450px;
     margin-top: -110px;
     font-size: 70px;
 }
-#quote{
- font-family: 'Permanent Marker', cursive;
- font-size: 24px;
- margin-left: 20px;
+#tShirt{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border: none;
+    border-radius:2rem;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#longSleeveTShirt{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border: none;
+    border-radius:2rem;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 120px;
+}
+#hoddie{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border: none;
+    border-radius:2rem;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 120px;
+}
+#denimJacket{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border: none;
+    border-radius:2rem;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 120px;
+}
+#dress{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border: none;
+    border-radius:2rem;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 120px;
+}
+#skirt{
+    font-family: 'Permanent Marker', cursive;
+    background-color:whitesmoke;
+    border-radius:2rem;;
+    border: none;
+    color:black;
+    padding: 19.75px 16.25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 80px;
+}
+#tShirt:hover{
+color: snow;
+background-color: black;
+}    
+#longSleeveTShirt:hover{
+color: snow;
+background-color: black;
+}
+#hoddie:hover{
+color: snow;
+background-color: black;
+}    
+#denimJacket:hover{
+color: snow;
+background-color: black;
+}
+#dress:hover{
+color: snow;
+background-color: black;   
+
+}
+#skirt:hover{
+color: snow;
+background-color: black;
 }
 #imagesContainer{
     display: grid;
     grid-template-columns:auto auto auto;
     grid-gap:20px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 #imagesContainer img{
     width:48%;
     height:350px;
     margin-left: 100px;
     position: relative;
-    border: 3px solid black;
+  width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 transparent, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;  
 }
+
 .prev{
 cursor: pointer;
-position: absolute;
-padding: 12px;
-margin-top:12%;
+ position: absolute;
+padding: 8px;
+margin-top:10%;
 margin-left:7%;
 color: white;
 transition: 0.6s ease;
 border-radius: 50%;
 z-index: 5;
 border: none;
- } 
+      } 
 .next{
-cursor: pointer;
-position: absolute;
-padding: 12px;
-margin-top:12%;
-margin-left:-1%;
-color: white;
-transition: 0.6s ease;
-border-radius: 50%;
-z-index:10;
-border: none;
+    cursor: pointer;
+    position: absolute;
+   padding: 8px;
+   margin-top:10%;
+   margin-left:-1%;
+   color: white;
+   transition: 0.6s ease;
+   border-radius: 50%;
+   z-index:10;
+   border: none;
 }          
 .prev:hover, .next:hover {
- background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0,0,0,0.8);
 } 
+
 #imagesContainer img:hover{
 transform: scale(1.18);
 }
@@ -119,27 +221,37 @@ transform: scale(1.18);
     font-family: 'Permanent Marker', cursive;
     text-align: center;
 }
+#size{
+    font-family: 'Permanent Marker', cursive;
+}
 .but{
     font-family: 'Permanent Marker', cursive;
     background-color:whitesmoke;
-    border: none;
     border-radius: 2rem;
+    border: none;
     color:black;
     padding: 15px 15px;
     text-decoration: none;
-    display: inline-block;
     font-size: 15px;
     cursor: pointer;
-    margin-left: 120px;
+    display:inline-block;
+    margin-left: 5%;
+    text-align: center;
+    margin-top: 1%;
+
+}
+form{
+display:inline-block;
+margin-left: 5%;
 }
 .but:hover{
-    background-color: black;
-    color: snow;
+  background-color: black;
+  color: snow;
 }
 #separator5{
     width: 100%;
     height: 15vh;
-    margin-top:-15px;
+    margin-top:1%;
 }
 #bg7{
     position: relative;
@@ -207,7 +319,7 @@ font-size: 20px;
 }
   
   input[type=submit]:hover {
-transform: scale(1.07);
+transform:scale(1.07);
 }
 #myLogo1{
     position: absolute;
@@ -240,5 +352,7 @@ transform: scale(1.07);
     margin-top: 15px;
 }
 #mainPage:hover{
-    color: tomato;
+ color:tomato;
 }
+
+ 

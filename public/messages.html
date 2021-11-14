@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/messages.css">
+    <title>messages8.11.21</title>
+</head>
+<section id="showContacts"></section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+        const showContacts= document.getElementById("showContacts");
+
+    function getPerson() {
+            axios
+                .get("/contacts")
+                .then(function (response) {
+                    const messages = response.data;
+                console.log(response.data);
+                for(let i=0;i<messages.length;i++){
+                showContacts.innerHTML +=`<article id="messageBlue">
+                <p id="messageContent">${messages[i].firstName}
+                ${messages[i].lastName}
+                ${messages[i].phoneNumber}
+                ${messages[i].email}
+                ${messages[i].message}
+                </p>
+                <div id="messageTime">SMS 13:37</div>
+                </article>`
+                }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+        getPerson();
+</script>
+<body>
+</body>
+</html>

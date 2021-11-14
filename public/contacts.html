@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Frijole&family=Open+Sans&family=Ultra&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Frijole&family=Oi&family=Open+Sans&family=Ultra&display=swap" rel="stylesheet">
+    <title>js project contacts 23.09.21</title>
+
+</head>
+<body>
+    <header>
+        <section>
+            <img id="separator" src="../images/separator.jpg">  
+            <article id="bg1"></article>
+        <h1 id="title">Contact-Us <i class="fa fa-phone"></i></h1>
+            <img id="myLogo" src="../images/logo3.png">
+            <ul>
+                <a class="myNav" href="/"><li>Home-Page <i class="fa fa-home"></i></li></a>
+                <a class="myNav" href="clothing.html"><li>clothing <i class="fa fa-shopping-bag"></i></li></a>
+                <a class="myNav" href="home&living.html"><li>Home&living <i class="fa fa-shopping-basket"></i></li></a>
+                <a class="myNav" href="jewelry&accessories.html"><li>Jewelry&Accessories <i class="fa fa-diamond"></i></li></a>
+                <a class="myNav" href="paintings.html"><li>Paintings <i class="fa fa-paint-brush"></i></li></a>
+                <a class="myNav" href="cart.html"><li>Shopping cart  <i class="fa fa-shopping-cart"></i></li></a>
+                <a class="myNav" href="contacts.html"><li>Contact 
+                    <i class="fa fa-phone"></i></li></a>
+               </ul>        
+           <nav> 
+           <img id="separator" src="../images/separator.jpg">
+         </nav>
+    </section> 
+</nav>
+<form id="forms">
+                        <section class="form">
+                <input id="fname" type="text" required placeholder="firstName"><br>
+                <input id="lname" type="text" required placeholder="lastName"><br>
+                <input id="phoneNumber" type="tel" required placeholder="phoneNumber"><br>
+                <input id="email" type="email" required placeholder="email"><br>
+                <input id="message" type="text" required placeholder="message"><br>
+                <input type="submit" value="Send">
+            </form>
+            <a href="messages.html"><input type="button" value="Get Contacts" ></a>
+        </section>
+    <section id="showContacts"></section>
+    </main>
+        <footer>
+            <h3 id="info1"><b class="B">info@fridakahlowebsite.com</b></h3><br><br>
+            <h3 id="info2"><b class="B"> t </b> 08-6754678 <b class="B"> f </b> 052-7653284</h3><br><br> 
+            <h3 id="info3">Join our mailing list to current things going on with Frida Kahlo</h3>
+            <img id="myLogo1" src="../images/logo1.png">
+            <article class="socialMedia">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google"></i>
+                <i class="fa fa-instagram"></i></h1>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-snapchat-ghost"></i><br>
+                <a id="mainPage" href="/">Main-Page</a>    
+            </article>
+<img id="separator5" src="../images/separator.jpg">  
+        </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+        integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const form = document.getElementById("forms");
+        const showContacts= document.getElementById("showContacts");
+        form.addEventListener("submit", addPerson);
+        function addPerson(e) {
+            e.preventDefault();
+            const firstName = document.getElementById("fname").value;
+            const lastName = document.getElementById("lname").value;
+            const phoneNumber = document.getElementById("phoneNumber").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            axios
+                .post("/contacts", {
+                    firstName: firstName,
+                    lastName: lastName,
+                    phoneNumber: phoneNumber,
+                    email: email,
+                    message: message
+                })
+                .then(function (response) {
+                    console.log(response.data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+        function getPerson() {
+            axios
+                .get("/contacts")
+                .then(function (response) {
+                    const messages = response.data;
+                console.log(response.data);
+                for(let i=0;i<messages.length;i++){
+                showContacts.innerHTML+=`<h1>${messages[i].firstName}
+                ${messages[i].lastName}
+                ${messages[i].phoneNumber}
+                ${messages[i].email}
+                ${messages[i].message}</h1>`
+                }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    </script>
+</body>
+
+</html>

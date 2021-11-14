@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/paintings.css">
+    <link rel="stylesheet" href="../css/home&living.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -15,35 +15,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Frijole&family=Oi&family=Open+Sans&family=Ultra&display=swap" rel="stylesheet">
-    <title>14.09 paintings jsProject</title>
+    <title>14.09 home&living jsProject</title>
 </head>
 <body>
     <header>
         <section>
     <img id="separator" src="../images/separator.jpg">
         <nav><article id="bg1"></article>
-            <h1 id="title">Frida Kahlo Paintings <i class="fa fa-paint-brush"></i></h1>
+            <h1 id="title">Frida Kahlo Home&Living <i class="fa fa-shopping-basket"></i></h1>
             <img id="myLogo" src="../images/logo3.png">
             <ul>
-            <a class="myNav" href="../index.html"><li>Home-Page <i class="fa fa-home"></i></li></a>
-            <a class="myNav" href="../html/clothing.html"><li>clothing <i class="fa fa-shopping-bag"></i></li></a>
-            <a class="myNav" href="../html/home&living.html"><li>Home&living <i class="fa fa-shopping-basket"></i></li></a>
-            <a class="myNav" href="../html/jewelry&accessories.html"><li>Jewelry&Accessories <i class="fa fa-diamond"></i></li></a>
-            <a class="myNav" href="../html/paintings.html"><li>Paintings <i class="fa fa-paint-brush"></i></li></a>
-            <a class="myNav" href="../html/cart.html"><li>Shopping cart  <i class="fa fa-shopping-cart"></i></li></a>
-            <a class="myNav" href="#contact"><li>Contact 
-                <i class="fa fa-phone"></i></li></a>
-           </ul>
-           <img id="bg2" src="../images/ca2.jpg"> 
+                <a class="myNav" href="/"><li>Home-Page <i class="fa fa-home"></i></li></a>
+                <a class="myNav" href="Products.html"><li>Products</li></a>
+                <a class="myNav" href="clothing.html"><li>clothing <i class="fa fa-shopping-bag"></i></li></a>
+                <a class="myNav" href="jewelry&accessories.html"><li>Jewelry&Accessories <i class="fa fa-diamond"></i></li></a>
+                <a class="myNav" href="paintings.html"><li>Paintings <i class="fa fa-paint-brush"></i></li></a>
+                <a class="myNav" href="cart.html"><li>Shopping cart  <i class="fa fa-shopping-cart"></i></li></a>
+                <a class="myNav" href="contacts.html"><li>Contact 
+                    <i class="fa fa-phone"></i></li></a>
+               </ul>         
+           <img id="bg2" src="../images/ca6.jpg"> 
            <img id="separator" src="../images/separator.jpg">
         </nav>
     </section>    
     </header>
     <main>
-    <div id="headLineBg"></div>   
-        <article><h1 id="headLine">Paintings <i class="fa fa-paint-brush"></i></h1></article>
-        <h4 id="quote">“I am my own muse. I am the subject I know best. The subject I want to know better.” (frida kahlo)</h4>
-        <div id="imagesContainer"></div>
+        <div id="headLineBg"></div>
+        <article><h1 id="headLine">Home&Living <i class="fa fa-shopping-basket"></i></h1></article>
+        <button type="button" id="kanvas">Kanvas</button>
+        <button type="button" id="blanket">Blanket</button>
+        <button type="button" id="carpet">Carpet</button>
+        <button type="button" id="pillow">Pillow</button>
+        <button type="button" id="planter">Planter</button>
+        <button type="button" id="oilBurner">Oil Burner</button>
+        <div id="homeLivingContainer"></div>
     </main>
     <footer>
         <img id="separator5" src="../images/separator.jpg">
@@ -61,11 +66,14 @@
             <i class="fa fa-instagram"></i></h1>
             <i class="fa fa-facebook"></i>
             <i class="fa fa-snapchat-ghost"></i><br>
-            <a id="mainPage" href="../index.html">Main-Page</a>
+            <a id="mainPage" href="/">Main-Page</a>
         </article>
-        <img id="separator6" src="../images/separator.jpg">
+        <img id="separator6" src="../images/separator.jpg">        
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+    integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/main.js"></script> 
-    <script src="../js/paintings.js"></script> 
-    <script src="../js/cart.js"></script> 
+    <script src="../js/home&living.js"></script> 
+    <script src="../js/deleteProduct.js"></script> 
 </body>
